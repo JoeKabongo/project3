@@ -1,0 +1,209 @@
+body{
+  margin: 0;
+  background-color: #ccccb3	;
+  background: url("foods.jpg");
+}
+
+.navbar{
+  background-color: #fff !important;
+  border-bottom: 10px solid #90AFC5;
+}
+
+main{
+  margin-bottom: 70px;
+}
+
+footer{
+  text-align: center;
+  width: 100vw;
+  bottom:  0;
+  position: fixed;
+  background-color:#fff;
+  border-top: 10px solid #90AFC5;
+
+}
+
+.btn{
+  background-color:  #90AFC5;
+  color:#000;
+}
+
+.btn:hover{
+  background-color: #57A0D3;
+
+  color:#fff;
+}
+
+.btn{
+  margin: -10px;
+}
+
+
+form a{
+  color: #000;
+  margin-left: 10px;
+}
+
+.menu{
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.menu div {
+  padding: 10px;
+  background-color: #fff;
+  margin: 30px;
+  color: #000;
+  font-size: 30px;
+  border: 2px solid #90AFC5;
+
+}
+
+.menu div:hover{
+  background-color: #90AFC5;
+
+}
+
+.menu a{
+  text-decoration: none;
+}
+
+@media(max-width:500px)
+{
+  .menu {
+    margin: auto;
+  }
+  .menu div {
+    padding: 2vw;
+    width: 80vw;
+    font-size: 20px;
+  }
+}
+
+
+.menu_order{
+  padding: 30px;
+  width: 35vw;
+  margin: 20px;
+  background-color: #fff;
+  border: 5px solid #90AFC5;
+
+  display: inline-block;
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+}
+
+.item
+{
+  text-align: center;
+}
+.btn{
+  margin: 5px;
+}
+
+@media (max-width:700px)
+{
+  .menu_order
+  {
+    padding: 5vw;
+    margin: 5vw;
+    width: 90vw;
+
+  }
+}
+
+.large_price
+{
+  display: none;
+}
+
+.sign input{
+  display: block !important;
+  width: 50%;
+  margin: 0 auto;
+}
+.sign{
+  text-align: center !important;
+  margin: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #90AFC5 ;
+}
+
+
+.form-group{
+  text-align: center !important;
+}
+
+
+.signup_error
+{
+  display: none;
+  color:#ff0000;
+}
+
+.signin_error
+{
+  color:#ff0000;
+
+}
+
+
+#toppings {
+  font-size: 12px;
+}
+
+#toppings p{
+  margin-bottom: 4px;
+}
+
+.dropdown-menu
+{
+  width: 200px !important;
+}
+
+.dropdown-menu input
+{
+  margin-left: 10px;
+}
+
+.topping_instructions
+{
+  font-size: 12px;
+}
+
+
+.cart{
+
+ margin : 30px auto 0 auto;
+ background-color: #fff;
+ width: 700px;
+ padding: 10px;
+ border: 3px solid #90AFC5;
+}
+.alert {
+  display: none;
+  position: fixed;
+  margin-bottom: 50vh;
+  margin-left: 50vw;
+}
+
+.pop-up-message{
+  background-color:#fff;
+  padding : 15px;
+  border: 3px solid  #90AFC5;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.pop-up-message span{
+  float:right;
+}
+
+.content-placeholder{
+    top: 50vh;
+    display: none;
+}

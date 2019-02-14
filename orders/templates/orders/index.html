@@ -1,0 +1,42 @@
+{% extends "orders/layout.html" %}
+
+{% block title %} Home {% endblock %}
+
+{% block body %}
+
+
+<section class="menu">
+  <a href="{% url 'pizza' %}" >
+    <div class="pizza-link">
+      Pizza
+    </div>
+  </a>
+
+  <a href="{% url 'sub'  %}" >
+    <div class="sub-link">
+      Subs
+    </div>
+  </a>
+
+
+  <a href="{% url 'pasta'  %}" >
+    <div class="pasta-link">
+      Pasta
+    </div>
+  </a>
+
+  <a href="{% url 'salad' %}" >
+    <div class="salad-link">
+      Salad
+    </div>
+  </a>
+
+  <a href="{% url 'dinnerplatter' %}" >
+    <div class="dinnerplatter-link">
+      Dinner Platter
+    </div>
+  </a>
+
+</section>
+
+{% endblock %}

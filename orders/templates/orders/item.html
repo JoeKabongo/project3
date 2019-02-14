@@ -1,0 +1,65 @@
+{% extends "orders/layout.html" %}
+
+
+{% block title %} {{item}} {% endblock %}
+
+{% block body %}
+
+<section class="item">
+
+
+  <h1 style="color:white;"> {{item}} </h1>
+  <div class="alert alert-success"  role="alert">
+    <button type="button" class="close" data-dismiss="">&times;</button>
+    <span> </span>
+
+  </div>
+  {% for food in menu %}
+
+
+
+    <div class="menu_order">
+
+      <h3> {{food.name}}</h3>
+      <!-- action="{% url 'add_item' item food.id %}" method="post"-->
+      <form  data-id={{food.id}} data-item={{item}} class="add_cart">
+
+        {% csrf_token %}
+
+
+        {% if size %}
+        <input style="display:none" name="size" value="">
+        <input style="display:none" name="price" value={{food.small_price}}>
+
+        <p class="price">${{food.small_price}}</p>
+
+        <select class="form-control select-size" name="select-size" >
+          <option value={{food.small_price}}>Small</option>
+          <option value={{food.large_price}}>Large</option>
+        </select>
+        {% else %}
+          <input style="display:none" name="price" value={{food.price}}>
+          <p class="price" >${{food.price}}</p>
+        {% endif %}
+          {% if toppings %}
+            <p class="topping_instructions"> +0.5 per toppings. Only 4 toppings allowed </p>
+            <button type="button" class="btn  dropdown-toggle dropdown-toggle-split btn-toppings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span> add toppings
+            </button>
+            <div class="dropdown-menu">
+              {% for topping in toppings %}
+                <input type="checkbox"  name="scales" class="topping" data-id={{topping.id}}>
+                <label for="scales" >{{topping}}</label><br>
+            {% endfor %}
+            </div>
+          {% endif %}
+
+          <button type="submit" class="btn"> Add to cart </button>
+      </form>
+    </div>
+  {% endfor %}
+  <div class="content-placeholder">  </div>
+
+</section>
+
+{% endblock %}
